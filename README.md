@@ -15,7 +15,9 @@ A linux GUI capture application for connexant cx2338[0/1/2/3] and cx25800 based 
 
 # Limitations:
   16 bit mode is not support.
-  auto adjustment of level not support (like how cxlvlcavdd does for CAV discs). As such, probably not best solution for CAV discs.
+  Auto adjustment of level not support (like how cxlvlcavdd does for CAV discs). As such, probably not best solution for CAV discs.
+  Can't change vmux from within the program (this would require further updates to cxadc driver to allow real time vmux change). Also, vmux changes won't be recognized while the program is running.
+
 
 
  
