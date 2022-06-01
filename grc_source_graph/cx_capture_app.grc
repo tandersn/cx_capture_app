@@ -45,6 +45,23 @@ blocks:
     coordinate: [184, 12]
     rotation: 0
     state: enabled
+- name: variable_qtgui_check_box_0
+  id: variable_qtgui_check_box
+  parameters:
+    comment: ''
+    'false': 'False'
+    gui_hint: (9,2,1,1)
+    label: +six DB
+    'true': 'True'
+    type: int
+    value: 'False'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1208, 36.0]
+    rotation: 0
+    state: true
 - name: variable_qtgui_entry_0
   id: variable_qtgui_entry
   parameters:
@@ -321,7 +338,7 @@ blocks:
     alias: ''
     cellalignment: '1'
     comment: ''
-    gui_hint: (9,2,1,1)
+    gui_hint: (9,1,1,1)
     label: '"Capturing..."'
     maxSize: '40'
     offColor: black
