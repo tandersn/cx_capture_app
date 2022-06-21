@@ -11,7 +11,7 @@ A linux GUI capture application for connexant cx2338[0/1/2/3] and cx25800 based 
 
 
 # WARNING!!! 
-  Still very experimental. Not sure if this is the best way to develop a capture app for cxadc, it's just what i could get done quickly. I also have tested A/B capturing with this and straight `cat /dev/cxadc0`.  It is not impossible for gnuradio to drop samples. 
+  Still very experimental. Not sure if this is the best way to develop a capture app for cxadc, it's just what i could get done quickly. I also haven't tested A/B capturing with this and straight `cat /dev/cxadc0`. 
 
 # Limitations:
   16 bit mode is not support.
