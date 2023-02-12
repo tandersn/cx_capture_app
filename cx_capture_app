@@ -75,13 +75,16 @@ class cx_capture_app(gr.top_block, Qt.QWidget):
             pass
 ###***************************** added after *********************************
         #READ IN CX CARD PARAMETERS
-        syssyfsfile = open(r"/sys/module/cxadc/parameters/level","r")
+        #syssyfsfile = open(r"/sys/module/cxadc/parameters/level","r")
+        syssyfsfile = open(r"/sys/class/cxadc/cxadc0/device/parameters/level","r")
         self.cxlevelstart = syssyfsfile.read()
         syssyfsfile.close()
-        syssyfsfile = open(r"/sys/module/cxadc/parameters/sixdb","r")
+        #syssyfsfile = open(r"/sys/module/cxadc/parameters/sixdb","r")
+        syssyfsfile = open(r"/sys/class/cxadc/cxadc0/device/parameters/sixdb","r")
         self.cxsixdbstart = int(syssyfsfile.read())
         syssyfsfile.close()
-        syssyfsfile = open(r"/sys/module/cxadc/parameters/center_offset","r")
+        #syssyfsfile = open(r"/sys/module/cxadc/parameters/center_offset","r")
+        syssyfsfile = open(r"/sys/class/cxadc/cxadc0/device/parameters/center_offset","r")
         self.cxcenter_offsetstart = syssyfsfile.read()
         syssyfsfile.close()
 ###***************************** added after *********************************
@@ -272,7 +275,8 @@ class cx_capture_app(gr.top_block, Qt.QWidget):
 
     def set_variable_qtgui_range_1(self, variable_qtgui_range_1):
 ###***************************** added after *********************************
-        syssyfsfile = open(r"/sys/module/cxadc/parameters/center_offset","w")
+        #syssyfsfile = open(r"/sys/module/cxadc/parameters/center_offset","w")
+        syssyfsfile = open(r"/sys/class/cxadc/cxadc0/device/parameters/center_offset","w")
         syssyfsfile.write(str(variable_qtgui_range_1))
         syssyfsfile.close()
 ###***************************** added after *********************************
@@ -283,7 +287,8 @@ class cx_capture_app(gr.top_block, Qt.QWidget):
 
     def set_variable_qtgui_range_0(self, variable_qtgui_range_0):
 ###***************************** added after *********************************
-        syssyfsfile = open(r"/sys/module/cxadc/parameters/level","w")
+        #syssyfsfile = open(r"/sys/module/cxadc/parameters/level","w")
+        syssyfsfile = open(r"/sys/class/cxadc/cxadc0/device/parameters/level","w")
         syssyfsfile.write(str(variable_qtgui_range_0))
         syssyfsfile.close()
 ###***************************** added after *********************************
@@ -302,7 +307,8 @@ class cx_capture_app(gr.top_block, Qt.QWidget):
 
     def set_variable_qtgui_check_box_0(self, variable_qtgui_check_box_0):
 ###***************************** added after *********************************
-        syssyfsfile = open(r"/sys/module/cxadc/parameters/sixdb","w")
+        #syssyfsfile = open(r"/sys/module/cxadc/parameters/sixdb","w")
+        syssyfsfile = open(r"/sys/class/cxadc/cxadc0/device/parameters/sixdb","w")
         if self.variable_qtgui_check_box_0 == True:   
            syssyfsfile.write(str(0))
         else:
