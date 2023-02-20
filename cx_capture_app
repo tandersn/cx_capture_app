@@ -120,6 +120,7 @@ class cx_capture_app(gr.top_block, Qt.QWidget):
 
 #        _variable_qtgui_toggle_button_0_toggle_button = qtgui.ToggleButton(self.set_variable_qtgui_toggle_button_0, 'Capture ON/OFF', self._variable_qtgui_toggle_button_0_choices, False,"red","gray",4, 50, 1, 1,self,"'value'".replace("'",""))
         _variable_qtgui_toggle_button_0_toggle_button = qtgui.ToggleButton(self.set_variable_qtgui_toggle_button_0, 'Capture ON/OFF', self._variable_qtgui_toggle_button_0_choices, False, 'value')
+        _variable_qtgui_toggle_button_0_toggle_button.setColors("default", "default", "red", "default")
 
         self.variable_qtgui_toggle_button_0 = _variable_qtgui_toggle_button_0_toggle_button
 
